@@ -1,27 +1,27 @@
-document.getElementById("validation-input").onblur = function () {
-  console.log(this.value.length);
-  if (this.getAttribute("data-length") > this.value.length) {
-    this.classList.remove("valid");
-    this.classList.add("invalid");
-  } else {
-    this.classList.remove("invalid");
-    this.classList.add("valid");
-  }
-};
+// document.getElementById("validation-input").onblur = function () {
+//   console.log(this.value.length);
+//   if (this.getAttribute("data-length") > this.value.length) {
+//     this.classList.remove("valid");
+//     this.classList.add("invalid");
+//   } else {
+//     this.classList.remove("invalid");
+//     this.classList.add("valid");
+//   }
+// };
 
 // варіант 2
-// const inputEl = document.getElementById("validation-input");
-// const amountOfEl = inputEl.getAttribute("data-length");
+const inputEl = document.getElementById("validation-input");
+const amountOfEl = inputEl.getAttribute("data-length");
 
-// inputEl.addEventListener("blur", function () {
-//   if (inputEl.value.length != amountOfEl) {
-//     inputEl.classList.remove("valid");
-//     inputEl.classList.add("invalid");
-//   } else {
-//     inputEl.classList.remove("invalid");
-//     inputEl.classList.add("valid");
-//   }
-// });
+inputEl.addEventListener("blur", function () {
+  if (inputEl.value.length != amountOfEl) {
+    inputEl.classList.remove("valid");
+    inputEl.classList.add("invalid");
+  } else {
+    inputEl.classList.remove("invalid");
+    inputEl.classList.add("valid");
+  }
+});
 
 // варіант 3
 
